@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  cursor: pointer;
+}
+.nav-list{
+  width: 70%;
+  display: flex;
+  /* justify-content: center; if we want content in center */
+  align-items: center;
+}
+.nav-list li{
+  list-style: none;
+  padding: 20px 30px;
+}
+.nav-list li a{
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-family: 'Kiwi Maru', serif;
+}
+.nav-list li a:hover{
+  color: grey;
+}
+.right-nav{
+  width: 30%;
+  text-align: right;
+}
+.logo{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img{
+  margin: 5px;
+  width: 30%;
+  display: flex;
+  border: 2px solid white;
+  border-radius: 50px;
+}
+#search{
+  padding: 5px;
+  font-size: 14px;
+  background: none;
+  border: 2px solid white;
+  color: #fff;
+  border-radius: 10px;
+}
+.background{
+  /* By using rgba we able to see our img url */
+  background: rgba(0, 0, 0, 0.7) url(/Images/bg.jpg);
+  background-size: cover;
+  background-blend-mode: darken;
+}
+.firstSection{
+  height: 90vh;
+}
+.box-main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;
+  max-width: 60%;
+  height: 75%;
+}
+.firsthalf{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.secondhalf{
+  width: 40%;
+}
+.secondhalf img{
+  width: 70%;
+  border: 3px solid white;
+  border-radius: 150px;
+  display: block;
+  margin: auto;
+}
+.text-big{
+  padding-top: 50px;
+  font-size: 35px;
+  /* text-align: center; */
+}
+.text-small{
+  font-size: 18px;
+  margin-top: 5px;
+}
+.btn{
+  padding: 10px;
+  margin: 10px 5px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+.btn-dark{
+  color: #333;
+  padding: 10px 20px;
+  border: 2px solid grey;
+  background-color: #fff;
+}
+.btn-sm{
+  padding: 6px 8px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+.section{
+  max-width: 80%;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: 'Kiwi Maru', serif; 
+}
+/* .section-left{
+  flex-direction: row-reverse;
+} */
+.para{
+  padding: 30px;
+}
+.sectionTag{
+  padding: 20px;
+}
+.sectionSubTag{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+/* Through unsplash images we can get multiple images on per refresh */
+.Thumbnail img{
+  width: 250px;
+  border: 3px solid grey;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+.contact{
+  background-color:coral;
+  height: 120vh;
+}
+.text-transform{
+  font-family: 'Kiwi Maru', serif;
+  padding: 20px;
+  text-align: center;
+  font-size: 35px;
+}
+.form{
+  max-width: 600px;
+  margin: auto;
+}
+.form-input{
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 2px solid gray;
+  margin: 12px 0;
+  padding: 5px 2px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.text-footer{
+  font-family: 'Kiwi Maru', serif;
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+}
+.burger{
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 15px;
+}
+.line{
+  width: 30px;
+  background: #fff;
+  height: 4px;
+  margin: 5px;
+}
+
+/* Media Query */
+@media only screen and (max-width: 1000px){
+  .nav-list{
+    flex-direction: column;
+  }
+  .navbar{
+    height: 500px;
+    flex-direction: column;
+    transition: all 0.8s ease;
+  }
+  .right-nav{
+    text-align: center;
+  }
+  .box-main{
+    flex-direction: column-reverse;
+    max-width: 100%;
+  }
+  #search{
+    width: 100%;
+  }
+  .burger{
+    display: block;
+  }
+  .height-nav-resp{
+    height: 70px;
+  }
+  .visibility-class-resp{
+    opacity: 0;
+  }
+  .logo img{
+    margin-top: 100px;
+  }
+  .secondhalf{
+    width: 30%;
+    margin-top: 100px;  
+  }
+  .section{
+    flex-direction: column-reverse;
+  }
+  .text-small{
+    text-align: center;
+  }
+  .text-big{
+    text-align: center;
+  }
+  .buttons{
+    text-align: center;
+  }
+  .para{
+    padding: 0;
+  }
+}
